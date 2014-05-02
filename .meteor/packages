@@ -4,7 +4,6 @@
 # but you can also edit it by hand.
 
 standard-app-packages
-autopublish
 insecure
 accounts-base
 accounts-facebook
@@ -18,3 +17,5 @@ d3
 email
 oauth-encryption
 spiderable
+houston
+iron-router
