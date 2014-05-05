@@ -3,19 +3,10 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-standard-app-packages
 insecure
-accounts-base
-accounts-facebook
-accounts-google
-accounts-password
-accounts-ui-unstyled
+standard-app-packages
 bootstrap
-code-prettify
-coffeescript
-d3
-email
-oauth-encryption
-spiderable
 iron-router
 spin
+accounts-ui-bootstrap-dropdown
+accounts-password
