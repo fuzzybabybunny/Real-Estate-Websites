@@ -8,7 +8,16 @@ Template.postSubmit.events({
       message: $(e.target).find('[name=message]').val()
     }
 
-    post._id = Posts.insert(post);
-    Router.go('postPage', post);
+    Meteor.call('post', post, function(error, id) {
+      if (error) {
+        // display the error to the user
+        Errors.throw(error.reason);
+
+        if (error.error === 302)
+          Router.go('postPage', {_id: error.details})
+      } else {
+        Router.go('postPage', {_id: id});
+      }
+    });
   }
 });
